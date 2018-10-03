@@ -1,0 +1,6 @@
+/*COMANDOS GITHUB*/
+
+git add nombre_archivo.extencion //es para agregar un nuevo archivo al repositorio
+git add .  //agrega todos los archivos modificados al paquete que ira al repositorio
+git commit -m "Mensaje informativo de lo que se modifico"  //es para crear el paquete y se pone un mensaje
+git push o git push  origin master  //es para mandar el paquete al repositorio y tener actualizados los archivos 
