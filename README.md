@@ -17,9 +17,13 @@ Son añadidos para facilitar el mantenimiento del encabezado y el pie de página
 
 Para el caso del encabezado \( `header.html` \) aún hay que solucionar en materia de estilo que el **documento activo** no se muestra, esto tal vez se pueda solucionar al ocupar JSP o PHP.
 
-## Sobre el diseño.
+## Sobre la trivia
 
-Por el momento, el diseño está optimizado para versiones de escritorio. Si el tiempo lo permite, lo optimizaré para móviles.
+Todas las páginas relacionadas a la trivia, son páginas estáticas para presentar un avance.
+
+## Sobre el diseño
+
+Por el momento, el diseño está optimizado para versiones de escritorio. Si el tiempo lo permite, se optimizará para móviles.
 
 ## Sobre la accesibilidad
 
