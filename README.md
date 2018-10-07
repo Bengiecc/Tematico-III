@@ -1,6 +1,6 @@
 # Laboratorio Temático III
 
-Estes es un proyecto académico desarrollado por alumnos de Lic. en Tecnologías y Sistemas de la Información | UAM Cuajimalpa.
+Este es un proyecto académico desarrollado por alumnos de Lic. en Tecnologías y Sistemas de la Información | UAM Cuajimalpa.
 
 ## Sobre los "pseudo-include"
 
