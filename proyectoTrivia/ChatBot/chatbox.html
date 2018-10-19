@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-body {
+        body {
     font: 20px arial, sans-serif;
     background-color: #d9d9d9;
     padding-top: 15px;
@@ -57,6 +57,7 @@ body {
 </head>
 
 <body>
+    <div id="header"></div>
     <div id='bodybox'>
         <div id='chatborder'>
             <p id="chatlog10" class="chatlog">&nbsp;</p>
@@ -73,7 +74,23 @@ body {
         </div>
 
     </div>
-    <script src="chatbox.js"></script>
+    <div id="footer"></div>
 </body>
+<script src="chatbox.js"></script>
+<script>
+    $("#header").load("header.html");
+    $("#footer").load("footer.html");
+    //Empuja el elemento #footer al final de la página
+    $(document).ready(function() {
+
+        var docHeight = $(window).height();
+        var footerHeight = $('#footer').height();
+        var footerTop = $('#footer').position().top + footerHeight;
+
+        if (footerTop < docHeight)
+            $('#footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+    });
+
+</script>
 
 </html>
