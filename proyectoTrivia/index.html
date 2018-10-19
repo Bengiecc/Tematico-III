@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    
+
     <!--load("header.html")-->
     <div id="header"></div>
 
@@ -54,8 +54,9 @@
         var footerHeight = $('#footer').height();
         var footerTop = $('#footer').position().top + footerHeight;
 
-        if (footerTop < docHeight)
-            $('#footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+        if (footerTop < docHeight) $('#footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
     });
+
 </script>
+
 </html>
