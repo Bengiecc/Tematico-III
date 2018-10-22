@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tarea 8</title>        
+        <link rel="stylesheet" href="GRAFICA.css"/>
+        <style type="text/css">
+            .grafica {
+                fill: #333333;
+            }
+            .grafica:hover {
+                fill: MediumSpringGreen ;
+            }
+            .axis{
+              font: 10px sans-serif;
+              stroke:  #333333;
+            }
+
+            .axis path,
+            .axis line {
+              fill: none;
+              stroke: #fff;
+              shape-rendering: crispEdges;
+            }
+        </style>        
+    </head>
+
+    <body>
+    	<center><h1>¡ACCIDENTES!</h1></center>
+        
+        <div id="despegable" class="styled-select slate"></div>
+        <br>
+        <div align="center">
+            <button>2013</button>
+            <button>2014</button>
+            <button>2015</button>
+            <button>2016</button>
+            <button>2017</button>
+        </div>
+        <div id="grafica" align="center">          
+
+
+
+        </div>    
+
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="GRAFICA.js"></script>
+    </body>
+
+</html>
