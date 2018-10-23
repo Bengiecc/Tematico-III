@@ -15,8 +15,13 @@ function chatbotResponse() {
         botMessage = hi[Math.floor(Math.random() * (hi.length))];;
     }
 
+<<<<<<< HEAD
     if (lastUserMessage === '¿Como te llamas?' || lastUserMessage == 'Nombre' || lastUserMessage == 'nombre' || lastUserMessage == '¿como te llamas?' ) {
         botMessage = 'Mi nombre es' + botName;
+=======
+    if (lastUserMessage === '¿Como te llamas?' || lastUserMessage == 'Nombre' || lastUserMessage == 'nombre') {
+        botMessage = 'Mi nombre es ' + botName;
+>>>>>>> 09c7cf705e884e147b6ebe316a00f0a86671ad7f
     }
     
     if (lastUserMessage === '¿Qué dice el artículo 1?' || lastUserMessage == 'Artículo 1' || lastUserMessage == 'articulo 1' || lastUserMessage == '¿que dice el articulo 1?') 
