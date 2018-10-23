@@ -15,7 +15,7 @@ function chatbotResponse() {
         botMessage = hi[Math.floor(Math.random() * (hi.length))];;
     }
 
-    if (lastUserMessage === '¿Como te llamas?' || lastUserMessage == 'Nombre') {
+    if (lastUserMessage === '¿Como te llamas?' || lastUserMessage == 'Nombre' || lastUserMessage == 'nombre') {
         botMessage = 'Mi nombre es ' + botName;
     }
     
