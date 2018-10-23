@@ -1,3 +1,13 @@
+$('.header').load('/header.html');
+    $('.footer').load('/footer.html');
+    $(document).ready(function() {
+        var docHeight = $(window).height();
+        var footerHeight = $('#footer').height();
+        var footerTop = $('#footer').position().top + footerHeight;
+        if (footerTop < docHeight)
+            $('#footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+    });
+
 var messages = [], // array que contiene el registro de cada cadena en el chat
     lastUserMessage = "", // realiza un seguimiento de la cadena de entrada más reciente del usuario
     botMessage = "", // var hace un seguimiento de lo que va a decir el chatbot
