@@ -27,47 +27,48 @@ shuffle($respuestas);
 
 <body>
     <div id="header"> </div>
-    
-        <?php
+
+    <?php
 		if(isset($_SESSION['respuesta']))
 		{
 		 echo $_SESSION['respuesta'];
 		}
 		?>
-        <!--
-        <h2>¡Hola, 
-            <?//php echo $_SESSION['nombre']. '! ' ?>Tus puntos:
-            <?//php echo $_SESSION['puntos']?>
-        </h2>
-        -->
-        <div class="container mx-auto py-3 align-middle">
+    <div class="container mx-auto py-3 align-middle">
         <a href="#" class="text-left float-left pt-3"><img src="/media/back.png" width="50%"></a>
         <a href="#" class="text-right float-right pt-3"><img src="/media/gear.png" width="55%"></a>
         <div class="text-center row">
             <!--Preguntas | Contenido Dinámico-->
-            <h3 class="text-left col-lg-8"><?=$pregunta['pregunta']?></h3>
+            <h3 class="text-left col-lg-8">
+                <?=$pregunta['pregunta']?>
+            </h3>
         </div>
     </div>
-        <p><label><b>
-                    </b></label></p>
-        <form method="post" id="form_responder" action="instancias/respuestas.php" accept-charset="utf-8" data-ajax="false">
-            <!--id de la respuesta-->
-            <input type="hidden" name="correcta" value="<?=$pregunta['correcta']?>" />
 
-            <?php $i = 1;
-			foreach ($respuestas as $respuesta) { ?>
-            <input type="radio" name="respuesta" id="radio-choice-<?=$i?>" value="<?=$respuesta['id']?>" />
-            <label for="radio-choice-<?=$i?>">
-                <?=$respuesta['respuesta']?></label>
-            <?php $i++; } ?>
-            <button type="submit" data-theme="b">Responder</button>
-        </form>
-        <a href="ranking.php" data-role="button" data-theme="a" data-ajax="false">Ver ranking</a>
-        <a href="instancias/logout.php" data-role="button" data-theme="a" data-ajax="false">Salir</a>
-
-    
-
-
+    <div class="container row mx-auto">
+        <div class="col-lg-8">
+            <div class="align-elements-center">
+                <h3 class="float-left"><img class="align-self-center pr-3" src="/media/clock.png" style="height: 1.25em;"><span class="align-self-center font-weight-bold" id="time">20s</span></h3>
+                <h3 class="text-right"><span class="align-self-center font-weight-bold pr-3">
+                        <?php echo $_SESSION['puntos']?></span><img class="align-self-center" src="/media/point.png" style="height: 1.25em;"></h3>
+            </div>
+            <form method="post" id="form_responder" action="instancias/respuestas.php" accept-charset="utf-8" data-ajax="false">
+                <?php 
+                    $i = 1;
+                    foreach ($respuestas as $respuesta) {
+                ?>
+                <div class="row pt-2">
+                    <button type="submit" id="form_responder" href="triviaUI.html" class="btn btn-info py-3 w-100">
+                        <p style="white-space: normal;" class="my-0">
+                            <?=$respuesta['respuesta']?>
+                            <?php $i++;?>
+                        </p>
+                    </button>
+                </div>
+                <?php }?>
+            </form>
+        </div>
+    </div>
     <div id="footer"> </div>
     <script src="/js/popper.js"></script>
     <script src="/js/bootstrap.js"></script>
