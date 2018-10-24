@@ -9,7 +9,7 @@ $pregunta = $trivial->get_preguntas();
 //obtenemos las posibles respuestas de la pregunta
 $respuestas = $trivial->get_respuestas($pregunta['id']);
 //las desordenamos
-//shuffle($respuestas);
+shuffle($respuestas);
 ?>
 <!DOCTYPE html>
 <html>
