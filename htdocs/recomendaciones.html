@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Index</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <!--load("header.html")-->
+    <div id="header"></div>
+
+    <section>
+        <div class="container pt-3 pt-lg-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-4 text-left">Recomendaciones</h1>
+                </div>
+            </div>
+        </div>
+        <div class="card-columns pt-3 py-5">
+            <div class="card">
+                <iframe width="100%" height="350px" src="https://www.youtube.com/embed/vTEChOyTbjI" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="card p-3">
+                <iframe width="100%" height="200px" src="https://www.youtube.com/embed/vTEChOyTbjI" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="card">
+                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/vTEChOyTbjI" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="card bg-primary text-white text-center p-3">
+                <blockquote class="blockquote mb-0">
+                    <p>Esto será una recomendación. <br/> Como varias otras más.</p>
+                    <footer class="blockquote-footer text-white">
+                        <small >
+                            Lo decimos Nosotros
+                        </small>
+                    </footer>
+                </blockquote>
+            </div>
+            <div class="card text-center">
+                <iframe width="100%" height="150px" src="https://www.youtube.com/embed/vTEChOyTbjI" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="card">
+                <iframe width="100%" height="200px" src="https://www.youtube.com/embed/vTEChOyTbjI" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="card p-3 text-right">
+                <iframe width="100%" height="350px" src="https://www.youtube.com/embed/vTEChOyTbjI" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="card">
+                <iframe width="100%" height="250px" src="https://www.youtube.com/embed/vTEChOyTbjI" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+
+    </section>
+
+    <!--load("footer.html")-->
+    <div id="footer"></div>
+
+</body>
+<!--Añado el siguiente Script para hacer un "include" con el encabezado y el pie de página. Más detalles en README.md-->
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script>
+    $("#header").load("/resources/header.html");
+    $("#footer").load("/resources/footer.html");
+    //Empuja el elemento #footer al final de la página
+    $(document).ready(function() {
+
+        var docHeight = $(window).height();
+        var footerHeight = $('#footer').height();
+        var footerTop = $('#footer').position().top + footerHeight;
+
+        if (footerTop < docHeight) $('#footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+    });
+
+</script>
+
+</html>
