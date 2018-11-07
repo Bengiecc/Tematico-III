@@ -20,14 +20,14 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-auto">
-                <div class="text-left">
+            <div class="col-12 row">
+                <div class="text-left col-lg-4 col-md-8 col-12">
                     <form method="post" id="form" action="instancias/login.php">
                         <div class="py-3">
                             <label for="email">Nombre</label>
-                            <input type="text" name="nombre" id="nombre" required class="form-control">
+                            <input type="text" name="nombre" id="nombre" class="form-control" required>
                         </div>
-                        <input type="submit" class="btn btn-info" value="Jugar">
+                        <input type="submit" class="btn btn-info" value="¡Comencemos!">
                     </form>
                 </div>
             </div>

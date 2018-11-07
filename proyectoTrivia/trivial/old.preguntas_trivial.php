@@ -28,13 +28,14 @@ shuffle($respuestas);
 <body>
     <div id="header"> </div>
 
-    <?php
+
+    <div class="container mx-auto py-3 align-middle">
+        <?php
 		if(isset($_SESSION['respuesta']))
 		{
 		 echo $_SESSION['respuesta'];
 		}
 		?>
-    <div class="container mx-auto py-3 align-middle">
         <a href="#" class="text-left float-left pt-3"><img src="/media/back.png" width="50%"></a>
         <a href="#" class="text-right float-right pt-3"><img src="/media/gear.png" width="55%"></a>
         <div class="text-center row">
