@@ -8,7 +8,7 @@ var svg = d3.select("body").append("svg")
     .append("g")
     .attr("transform", "translate(" + margen.left + "," + margen.top + ")");
 
-d3.csv("ACCIDENTES.csv", function(error, datos){
+d3.csv("../../resources/graph/data.csv", function(error, datos){
 
    /*
     var anio = [1914,1937,1938,1943,1944,1948,1949,1950,1951,1953,1956,1958,1959,1961,1962,1963,1964,1965
