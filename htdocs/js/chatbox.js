@@ -3,19 +3,45 @@ var messages = [], // array que contiene el registro de cada cadena en el chat
     botMessage = "", // var hace un seguimiento de lo que va a decir el chatbot
     botName = 'Alfred', //Nombre del chatbot
     talking = true; // cuando es falso la función de voz no funciona
+var texto = "";
 //****************************************************************
 //****************************************************************
+function normalizaTexto(mensaje) {
+    var lengTex = 0;
+    mensaje = mensaje.normalize('NFD').replace(/([^n\u0300-\u036f]|n(?!\u0303(?![\u0300-\u036f])))[\u0300-\u036f]+/gi,"$1").normalize();
+    mensaje = mensaje.toLowerCase();
+    lengTex = mensaje.length;
+
+        console.log("antes del for");
+    for(var i=0; i<lengTex; i++){
+        console.log("entra for");
+        if(mensaje == "hola"){
+            for(var j=0; j<lengTex; j++){
+                mensaje="hola1";
+            }
+        }
+    }
+
+    alert(mensaje + "\nleng:" + lengTex);
+
+    return mensaje;
+}
+
+
+
+
+
 //Respuestas chatbot
 function chatbotResponse() {
     talking = true;
     botMessage = "No comprendo"; //Mensaje predefinido
 
     if (lastUserMessage === 'hola' || lastUserMessage == 'Hola') {
-        const hi = ['Hola', '¿Que paso?', 'Que tal!', '¡Hola!']
+        const hi = ['Hola', '¿Qué pasó?', 'Qué tal!', '¡Hola!']
         botMessage = hi[Math.floor(Math.random() * (hi.length))];;
     }
 
-    if (lastUserMessage === '¿Como te llamas?' || lastUserMessage == 'Nombre') {
+    if (lastUserMessage === '¿como te llamas?' || lastUserMessage == 'Nombre' || lastUserMessage == 'Cúal') {
         botMessage = 'Mi nombre es ' + botName;
     }
     
@@ -347,7 +373,7 @@ function chatbotResponse() {
         botMessage = '- Las infracciones a este Reglamento que sean detectadas a través de equipos y sistemas tecnológicos, serán impuestas por el agente que se encuentre asignado para ello, lo cual se hará constar en boletas seriadas autorizadas por Seguridad Pública.Adicionalmente a lo indicado en el artículo 60, las boletas señalarán: I. Tecnología utilizada para captar la comisión de la infracción y el lugar en que se encontraba el equipo tecnológico al momento de ser detectada la infracción cometida; y II. Formato expedido por el propio instrumento tecnológico que captó la infracción o copia de la imagen y/o sonidos y su trascripción en su caso, con la confirmación de que los elementos corresponden en forma auténtica y sin alteración de ningún tipo a lo captado por el instrumento tecnológico utilizado. La información obtenida con equipos y sistemas tecnológicos, con base en la cual se determine la imposición de la sanción, hará prueba plena en términos de lo que dispone el artículo 34 de la Ley que Regula el Uso de Tecnología para la SeguridadPública del Distrito Federal.'; 
     }
 
-if (lastUserMessage === '¿Qué dice el artículo 62?' || lastUserMessage == 'Artículo 62' || lastUserMessage == 'articulo 62' || lastUserMessage == '¿que dice el articulo 62?')
+    if (lastUserMessage === '¿Qué dice el artículo 62?' || lastUserMessage == 'Artículo 62' || lastUserMessage == 'articulo 62' || lastUserMessage == '¿que dice el articulo 62?')
     {        
         botMessage = 'El pago de la multa se puede realizar en: I. Oficinas de la Administración Tributaria de la Tesorería del Distrito Federal de la Secretaría de Finanzas; II. Centros autorizados para este fin, incluyendo medios electrónicos de pago; o III. Con el agente que impuso la infracción en caso de que cuente con el equipo electrónico portátil (Hand held).El infractor tendrá un plazo de treinta días naturales contados a partir de la fecha de emisión de la boleta de sanción para realizar el pago, teniendo derecho a que se le descuente un 50% del monto de la misma, con excepción de la sanción que establece el artículo 33, fracción II de este Reglamento; vencido el plazo señalado sin que se realice el pago, deberá cubrir los demás créditos fiscales que establece el Código Fiscal del Distrito Federal. Para el caso de las infracciones que son notificadas vía correo certificado o con acuse de recibo, el ciudadano podrá promover la aplicación del derecho mencionado si la línea de captura que acompaña al documento expira antes del plazo mencionado, siempre y cuando se acredite, en las Oficinas de Atención Ciudadana para la Aclaración de Infracciones, que la fecha de notificación domiciliaria fue extemporánea. Cuando la infracción sea cometida por conductores que manejan un vehículo con placas de matrícula de otra entidad federativa o país, el agente deberá retirar la placa delantera o retener la licencia de conducir o la tarjeta de circulación, cuando el cobro de la sanción no sea realizado en el sitio e indicar en la boleta de infracción que se procedió de esa forma.La placa de matrícula o documentación retenida le será devuelta al conductor en las oficinas de Seguridad Pública, una vez realizado el pago.'; 
     }
@@ -411,6 +437,7 @@ function newEntry() {
         lastUserMessage = document.getElementById("chatbox").value;
         // establece el cuadro de chat para ser claro
         document.getElementById("chatbox").value = "";
+        lastUserMessage = normalizaTexto(lastUserMessage);
         // agrega el valor del chatbox a los mensajes de la matriz
         messages.push(lastUserMessage);
         // Speech (lastUserMessage); // dice lo que el usuario tecleó en voz alta
