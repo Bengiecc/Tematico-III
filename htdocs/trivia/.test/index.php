@@ -40,8 +40,8 @@
 <script src="/js/popper.js"></script>
 <script src="/js/bootstrap.js"></script>
 <script>
-    $("#header").load("/header.html");
-    $("#footer").load("/footer.html");
+    $("#header").load("/resources/header.html");
+    $("#footer").load("/resources/footer.html");
     //Empuja el elemento #footer al final de la página
     $(document).ready(function() {
 
