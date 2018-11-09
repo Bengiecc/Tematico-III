@@ -1,0 +1,9 @@
+Dirección IPv4:	192.168.5.XX <- ultimos dos digitos corresponden a la etiqueta roja en el cable
+Puerta de Enlace: 192.168.5.250
+Servidores DNS IPv4:	148.206.191.1
+148.206.129.216
+Máscara de Subred 255.255.255.0
+Fabricante:	Realtek
+Descripción:	Realtek PCIe FE Family Controller
+Versión del controlador:	9.1.407.2015
+Dirección física (MAC):	28-F1-0E-25-47-6A
