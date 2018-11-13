@@ -1,7 +1,7 @@
 var messages = [], // array que contiene el registro de cada cadena en el chat
     lastUserMessage = "", // realiza un seguimiento de la cadena de entrada más reciente del usuario
     botMessage = "", // var hace un seguimiento de lo que va a decir el chatbot
-    botName = 'Alfred', //Nombre del chatbot
+    botName = 'María', //Nombre del chatbot
     talking = true, // cuando es falso la función de voz no funciona
     texto = "",
     cadenaUsuario = "";
@@ -52,7 +52,7 @@ function chatbotResponse() {
     }
 
     if (cadenaUsuario == 'comotellamas' || cadenaUsuario == 'nombre' || cadenaUsuario == 'cualestunombre' || cadenaUsuario == "comotedicen") {
-        botMessage = 'Mi nombre es ' + botName + ", pero me puedes decir muñeco";
+        botMessage = 'Mi nombre es ' + botName + ", pero me puedes decir Mari.";
     }
     
     if (cadenaUsuario === 'quediceelarticulo1' || cadenaUsuario == 'articulo1' || cadenaUsuario == 'articulouno' || cadenaUsuario == 'dimeelarticulo1')
@@ -471,13 +471,14 @@ function newEntry() {
 function Speech(say) {
     if ('speechSynthesis' in window && talking) {
         var utterance = new SpeechSynthesisUtterance(say);
+        var voices = window.speechSynthesis.getVoices();
         //msg.voice = voices[10]; // Nota: algunas voces no admiten la modificación de parámetros
         //msg.voiceURI = 'native';
-        //utterance.volume = 1; // 0 to 1
-        //utterance.rate = 0.1; // 0.1 to 10
-        //utterance.pitch = 1; //0 to 2
+        utterance.volume = 1; // 0 to 1
+        utterance.rate = 1; // 0.1 to 10
+        utterance.pitch = 0.9; //0 to 2
         //utterance.text = 'Hello World';
-        //utterance.lang = 'en-US';
+        utterance.lang = 'es-US';
         speechSynthesis.speak(utterance);
     }
 }
