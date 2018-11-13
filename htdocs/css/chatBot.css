@@ -1,3 +1,5 @@
+
+
 #bodybox {
     margin: auto;
     max-width: 550px;
@@ -40,10 +42,16 @@
 
 #botonEnter {
     position: relative;
-    margin-left: 92%;
     font: 17px arial, sans-serif;
+    margin-left: 85%;
     height: 27px;
-    width: 10%;
-    top: -27px;
+    width: 30px;
+    bottom: 62px;
+    background-color: black;
+}
+#boton01{
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 5px 25px rgba(0,0,0,.2);
 }
 
