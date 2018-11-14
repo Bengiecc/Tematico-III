@@ -36,11 +36,6 @@ function normalizaCadena(cadena){
 
 
 
-
-
-
-
-
 //Respuestas chatbot
 function chatbotResponse() {
     talking = true;
