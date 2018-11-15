@@ -11,29 +11,35 @@
 
 <body>
     <div id="header"></div>
-
-    <div id='bodybox'>
-        <div id='chatborder'>
-            <p id="chatlog10" class="chatlog">&nbsp;</p>
-            <p id="chatlog9" class="chatlog">&nbsp;</p>
-            <p id="chatlog8" class="chatlog">&nbsp;</p>
-            <p id="chatlog7" class="chatlog">&nbsp;</p>
-            <p id="chatlog6" class="chatlog">&nbsp;</p>
-            <p id="chatlog5" class="chatlog">&nbsp;</p>
-            <p id="chatlog4" class="chatlog">&nbsp;</p>
-            <p id="chatlog3" class="chatlog">&nbsp;</p>
-            <p id="chatlog2" class="chatlog">&nbsp;</p>
-            <p id="chatlog1" class="chatlog">&nbsp;</p>
-            <input type="text" name="chat" id="chatbox" placeholder="¡Hola! Escribe aquí para hablar conmigo." onfocus="placeHolder()">
+    <div class="container row mx-auto pt-3 pt-lg-5">
+        <div class="col-12 mx-auto">
+            <h1 class="display-4 text-left">ChatBot</h1>
+            <h5 class="font-weight-light text-left">¿Buscas respuestas rápidas? Pregúntale a María</h5>
         </div>
-
-        <div id="botonEnter">
-            <input type="button" id="boton01" value="->"/>
+        <div class="mx-auto col-lg-6 col-md-8 col-12">
+            <div class="container mx-auto w-100 pt-3 pb-3 h-100">
+                <div class="card position-relative bg-transparent h-100">
+                    <div class="ScrollToggle chatlog">
+                        <p id="chatlog5" class="chatlog">&nbsp;</p>
+                        <p id="chatlog4" class="chatlog">&nbsp;</p>
+                        <p id="chatlog3" class="chatlog">&nbsp;</p>
+                        <p id="chatlog2" class="chatlog">&nbsp;</p>
+                        <p id="chatlog1" class="chatlog">&nbsp;</p>
+                    </div>
+                </div>
+                <div class="row px-2">
+                    <div class="col-9 align-self-center">
+                        <input class="w-100" type="text" name="chat" class="form-control" id="chatbox" placeholder="¡Hola! Escribe aquí para hablar conmigo." onfocus="placeHolder()">
+                    </div>
+                    <div class="col-3 align-self-center">
+                        <button class="btn btn-info" onclick="buttonEntry()" type="button">Enviar</button>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
 
-<div id="footer"></div>
+    <div id="footer"></div>
 </body>
 <script src="/js/jquery.js"></script>
 <script src="/js/popper.js"></script>
