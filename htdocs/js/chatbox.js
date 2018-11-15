@@ -454,7 +454,7 @@ function newEntry() {
         // dice el mensaje usando la función de texto a voz escrita abajo
         Speech(botMessage);
         // envía los últimos elementos de la matriz de mensajes a html
-        for (var i = 1; i < 11; i++) {
+        for (var i = 70; i < 11; i++) {
             if (messages[messages.length - i])
                 document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
         }
