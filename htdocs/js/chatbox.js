@@ -4,7 +4,8 @@ var messages = [], // array que contiene el registro de cada cadena en el chat
     botName = 'María', //Nombre del chatbot
     talking = true, // cuando es falso la función de voz no funciona
     texto = "",
-    cadenaUsuario = "";
+    cadenaUsuario = "",
+    cadena2 = "";
 //****************************************************************
 //****************************************************************
 
@@ -42,7 +43,7 @@ function chatbotResponse() {
     botMessage = "No comprendo"; //Mensaje predefinido
 
     if (cadenaUsuario == 'hola') {
-        const hi = ['Hola, ¿En qué te puedo ayudar?', '¿Qué pasó?', 'Qué tal!', '¡Hola!']
+        const hi = ['Hola, ¿En qué te puedo ayudar?']//, '¿Qué pasó?', 'Qué tal!', '¡Hola!'
         botMessage = hi[Math.floor(Math.random() * (hi.length))];;
     }
 
@@ -361,6 +362,11 @@ function chatbotResponse() {
 // esto se ejecuta cada vez que se presiona enter.
 // Controla la entrada y salida general.
 function newEntry() {
+    speechSynthesis.cancel();
+	var longCadena = 0;
+	var longCadena1 = 0;
+	var cadena3 = "";
+
     // si el mensaje del usuario no está vacío, ejecute
     if (document.getElementById("chatbox").value != "") {
         // extrae el valor del cuadro de chat y lo establece en el último mensaje de usuario
@@ -376,7 +382,42 @@ function newEntry() {
         // agrega el nombre y el mensaje del chatbot a los mensajes de la matriz
         messages.push("<div class=\"balon2 p-2 m-0 position-relative d-flex flex-column align-items-start\" data-is=\"María\"><a>" + botMessage + "</a></div>");
         // dice el mensaje usando la función de texto a voz escrita abajo
-        Speech(botMessage);
+        
+        longCadena = botMessage.length;
+
+        console.log("valor longitud cadena:",longCadena);
+        var i = 0;
+        var k = 0;
+        while(botMessage[k] != undefined){
+        	
+        	while(botMessage[i] != ',' && botMessage[i] != '.' && botMessage[i] != undefined){
+        		cadena2 = cadena2 + botMessage[i];
+        		i++;
+        	}
+        	longCadena1 = cadena2.length;
+        	botMessage = botMessage.substring(longCadena1 + 2,longCadena);
+
+        	//Speech(cadena2);
+
+        	if ('speechSynthesis' in window && talking) {
+        		var utterance = new SpeechSynthesisUtterance(cadena2);
+        		var voices = window.speechSynthesis.getVoices();
+	        	//msg.voice = voices[10]; // Nota: algunas voces no admiten la modificación de parámetros
+    		    //msg.voiceURI = 'native';
+    	    	utterance.volume = 1; // 0 to 1
+		        utterance.rate = 1.1; // 0.1 to 10
+    	    	utterance.pitch = 0.9; //0 to 2
+        		//utterance.text = 'Hello World';
+		        utterance.lang = 'es-US';
+	    	    speechSynthesis.speak(utterance);
+    		}
+
+        	cadena2 = "";
+        	i = 0;
+
+        }
+        console.log("sle del bucle");
+
         // envía los últimos elementos de la matriz de mensajes a html
         for (var i = 1; i < 11; i++) {
             if (messages[messages.length - i])
@@ -398,11 +439,12 @@ function Speech(say) {
         //msg.voice = voices[10]; // Nota: algunas voces no admiten la modificación de parámetros
         //msg.voiceURI = 'native';
         utterance.volume = 1; // 0 to 1
-        utterance.rate = 1; // 0.1 to 10
+        utterance.rate = 1.1; // 0.1 to 10
         utterance.pitch = 0.9; //0 to 2
         //utterance.text = 'Hello World';
         utterance.lang = 'es-US';
         speechSynthesis.speak(utterance);
+        //speechSynthesis.cancel();
     }
 }
 
@@ -417,7 +459,7 @@ function keyPress(e) {
         newEntry();
     }
     if (key == 38) {
-        console.log('hi')
+        console.log('hi');
         //document.getElementById("chatbox").value = lastUserMessage;
     }
 }
