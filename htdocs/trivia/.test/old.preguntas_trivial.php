@@ -100,7 +100,7 @@ shuffle($respuestas);
 
         }
         $(document).ready(function() {
-            $(".countdown").countdown(timeoutRedirect, 5, " s");
+            $(".countdown").countdown(timeoutRedirect, 20, " s");
         })
 
     </script>
