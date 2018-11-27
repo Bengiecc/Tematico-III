@@ -1,6 +1,6 @@
 var margen = {top: 90, right: 5, bottom: 90, left: 200},
-    width = 1000 - margen.left - margen.right,
-    height = 600 - margen.top - margen.bottom;
+    width = 1100 - margen.left - margen.right,
+    height = 700 - margen.top - margen.bottom;
 
 var svg = d3.select("body").append("svg")
     .attr("width", width + margen.left + margen.right)
