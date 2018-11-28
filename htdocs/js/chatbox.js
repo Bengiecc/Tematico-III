@@ -6,6 +6,7 @@ var messages = [], // array que contiene el registro de cada cadena en el chat
     texto = "",
     cadenaUsuario = "",
     cadena2 = "";
+var valida = 0;
 //****************************************************************
 //****************************************************************
 
@@ -40,7 +41,7 @@ function normalizaCadena(cadena) {
 //Respuestas chatbot
 function chatbotResponse() {
     talking = true;
-    botMessage = "No he comprendido lo que me has dicho. Puedes preguntarme por un artículo del reglamento de tránsito."; //Mensaje predefinido
+    botMessage = "Lo siento, no tengo respuesta para eso. Puedes preguntarme por un artículo del reglamento de tránsito o algo referente."; //Mensaje predefinido
 
 
 
@@ -52,11 +53,38 @@ function chatbotResponse() {
 
 
     if (cadenaUsuario == 'cuentameunchiste' || cadenaUsuario == 'chiste' || cadenaUsuario == 'dimeunchiste'  || cadenaUsuario == 'cuentaunchiste' ) {
-        const hi = ['No soy buena contando chistes.', 'Toc Toc, "¿Quién es?", "Talanda", "¿Qué Talanda?", "¿Bien y usted???"',
-        			'Un hombre pregunta a su vecino: "¿Tienes Wi-Fi?", "Si." "¿Cuál es la clave?", "Tener dinero y pagarlo."',
-        			'Sí, una adivinanza. "¿Qué pasa si tiras un pato al agua?", "Nada."',
+        const hi = ['No soy muy buena para eso, mejor en otro momento.', 
+                    'Toc Toc, "¿Quién es?", "Talanda", "¿Qué Talanda?", "¿Bien y usted???"',
+        			'Un hombre pregunta a su vecino. "¿Tienes Wi-Fi?", "Si." "¿Cuál es la clave?", "Tener dinero y pagarlo."',
+        			'Mejor una adivinanza. "¿Qué pasa si tiras un pato al agua?", "Nada."',
         			'¿Quién es el hermano de James Bond?, "Car Bon."',
-        			'Hola "¿Está el señor Rosado?," "Sí." "Pues dígale que se ponga talco."']
+        			'Hola "¿Está el señor Rosado?," "Sí." "Pues dígale que se ponga talco."',
+                    'Amor dame al bebé, "Espera a que llore", ¿Por qué?, "Porque no sé dónde lo dejé."',
+                    'Papá, ¿Qué se siente tener un hijo tan guapo?, No sé hijo, pregúntale a tu abuelo...',
+                    'Pedrito, ¿qué planeta va después de Marte?, "Miércole."',
+                    '¿Cuál es el pez que usa corbata?, "El Pez cuezo."',
+                    'Profesora, ¿qué quiere decir "why"?, "¿Por qué?", Nada más preguntaba.',
+                    'Mamá, en el colegio me llaman distraído, "Juanito, tu vives en la casa de enfrente".',
+                    '¿Cuál es el colmo de un oso panda?, Que le saquen una foto a color y salga en blanco y negro.',
+                    '¿Cuál es el colmo de un constructor?, Que se llame Armando Paredes.',
+                    '¿Cuál es el colmo de una gallina?, Que tenga plumas y no pueda escribir.',
+                    '¿Cuál es el colmo de un Robot?, Que tenga nervios de acero.',
+                    '¿Qué le dijo un Bit a otro Bit?, Nos vemos mañana en el Bus!',
+                    '¿Qué le dijo un gusano a otro gusano?, Me voy a dar una vuelta a la manzana.',
+                    '¿Qué es un terapeuta?, 1024 Gigapeutas.',
+                    '¿Qué le dice un GIF a un JPEG?, Anímate viejo.',
+                    '¿Por qué los elefantes le tienen miedo a las computadoras?, Por el mouse.',
+                    '¿Cuál es el animal que anda con una pata?, Pues el pato.',
+                    '¿Qué le pasa a Santa Claus si pierde un reno?, Le da insuficiencia renal.',
+                    'Doctor, vengo a que me osculte. "Ráspido, en el arsmario."',
+                    'Hola, ¿está Felix?, "No, estoy trixte."',
+                    '¿Qué coche usa Papá Noel?, Un renol.',
+                    '¿Cómo queda un mago después de comer?, Magordito.',
+                    'Había una mujer tan gorda pero tan gorda que cuando se pesaba en la balanza salía: Continuará…',
+                    '¿Qué le dice un mimo a otro mimo?, Este es mimo mento.',
+                    'Hola ¿Está Agustín?, "No, estoy incomodín."',
+                    'Toc toc, "¿Quién es?", "Abraham", "Lo siento pero si no me dices quién eres no abro."',
+                    'Un tenedor ve caminando a su amiga y le grita "Cuchara, cuchara", Su amiga sin voltear sigue caminando y el tenedor dice. "Uy parece como que no escuchara"']
         botMessage = hi[Math.floor(Math.random() * (hi.length))];;
     }
 
@@ -388,6 +416,67 @@ function chatbotResponse() {
 }
 
 
+function bienvenida(){
+    var divChatBot = document.getElementById("divPrincipal");
+    var botonInicial = document.getElementById("botonInicial");
+    var longCadena = 0;
+    var longCadena1 = 0;
+    var i = 0;
+    var k = 0;
+
+
+    divChatBot.style.display = 'block';
+    botonInicial.style.display = 'none';
+    botMessage = "Hola, mi nombre es María. Estoy aquí para ayudarte, puedes preguntar por algún artículo del reglamento de tránsito o por información a cerca de la educación vial."
+     +" También me puedes pedir que te cuente algún chiste o algo que quieras saber. Aunque no tengo respuestas para todo, quizá pueda ayudarte y con el tiempo responderé a más cosas.";
+
+    messages.push("<div class=\"balon2 p-2 m-0 position-relative d-flex flex-column align-items-start\" data-is=\"María\"><a>" + botMessage + "</a></div>");
+       
+
+    longCadena = botMessage.length;
+   
+    while(botMessage[k] != undefined){
+            
+        while(botMessage[i] != '.' && botMessage[i] != undefined){
+            cadena2 = cadena2 + botMessage[i];
+            i++;
+        }
+        longCadena1 = cadena2.length;
+        botMessage = botMessage.substring(longCadena1 + 2,longCadena);
+
+        //Speech(cadena2);
+        if ('speechSynthesis' in window && talking) {
+            var utterance = new SpeechSynthesisUtterance(cadena2);
+            var voices = window.speechSynthesis.getVoices();
+            //msg.voice = voices[10]; // Nota: algunas voces no admiten la modificación de parámetros
+            //msg.voiceURI = 'native';
+            utterance.volume = 1; // 0 to 1
+            utterance.rate = 1.1; // 0.1 to 10
+            utterance.pitch = 0.9; //0 to 2
+            //utterance.text = 'Hello World';
+            utterance.lang = 'es-US';
+            speechSynthesis.speak(utterance);
+        }
+
+        cadena2 = "";
+        i = 0;
+
+    }
+
+    // envía los últimos elementos de la matriz de mensajes a html
+    for (var i = 1; i < 11; i++) {
+        if (messages[messages.length - i])
+            document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
+    }
+    //desplaza hasta el fondo con cada nueva linea de texto...
+    $('.chatlog').stop().animate({
+        scrollTop: $('.chatlog')[0].scrollHeight
+    });
+
+
+
+}
+
 
 // esto se ejecuta cada vez que se presiona enter.
 // Controla la entrada y salida general.
@@ -395,11 +484,12 @@ function newEntry() {
     speechSynthesis.cancel();
 	var longCadena = 0;
 	var longCadena1 = 0;
-	var cadena3 = "";
 
 
 
     // si el mensaje del usuario no está vacío, ejecute
+
+
     if (document.getElementById("chatbox").value != "") {
         // extrae el valor del cuadro de chat y lo establece en el último mensaje de usuario
         lastUserMessage = document.getElementById("chatbox").value;
