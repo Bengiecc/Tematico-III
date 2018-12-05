@@ -30,7 +30,7 @@ shuffle($respuestas);
 
     <div class="container mx-auto py-3 align-middle">
         <a href="/trivia/index.html" class="text-left float-left pt-3"><img src="/images/back.png" width="50%"></a>
-        <a href="/trivia/.test/ranking.php" class="text-right float-right pt-3"><img src="/images/trophy.png" width="35%"></a>
+        <a href="/trivia/ranking.php" class="text-right float-right pt-3"><img src="/images/trophy.png" width="35%"></a>
         <div class="text-center row">
             <h4 class="text-left col-lg-8">
                 <?=$pregunta['pregunta']?>
@@ -45,7 +45,7 @@ shuffle($respuestas);
                 <h3 class="text-right"><span class="align-self-center font-weight-bold pr-3">
                         <?=$_SESSION['puntos']?></span><img class="align-self-center" src="/images/point.png" style="height: 1.25em;"></h3>
             </div>
-            <form method="post" action="/trivia/.test/instancias/respuestas.php" class="pb-5">
+            <form method="post" action="/trivia/instancias/respuestas.php" class="pb-5">
                 <input type="hidden" name="correcta" value="<?=$pregunta['correcta']?>" />
                 <?php 
                     $i = 1;

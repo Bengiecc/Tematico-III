@@ -4,4 +4,4 @@ $nombre = $_POST['nombre'];
 $trivial = new Trivial();
 $trivial->new_user($nombre);
 $_SESSION['nombre'] = $nombre;
-header("Location: ../old.preguntas_trivial.php");
+header("Location: ../preguntas_trivial.php");

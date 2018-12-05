@@ -9,10 +9,10 @@ if($correcta == $respuesta)
 {
 	$_SESSION['puntos'] += 10;
 	$trivial->update_puntuacion($_SESSION['puntos'],$_SESSION['nombre']);
-	header("Location: ../old.preguntas_trivial.php");
+	header("Location: ../preguntas_trivial.php");
 //SI NO ES CORRECTA MOSTRAMOS QUE NO LO ES Y MOSTRAMOS OTRA NUEVA
 }else{
 	$_SESSION['puntos'] -= 10;
 	$trivial->update_puntuacion($_SESSION['puntos'],$_SESSION['nombre']);
-	header("Location: ../old.preguntas_trivial.php");
+	header("Location: ../preguntas_trivial.php");
 }
