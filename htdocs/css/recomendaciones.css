@@ -1,0 +1,276 @@
+#img1{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/peatones/img1-01.jpg");
+}
+#img1:hover{
+	background-image: url("/images/recomendaciones/peatones/img1-02.jpg");
+}
+		
+#img2{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/peatones/img2-01.jpg");
+}
+#img2:hover{
+	background-image: url("/images/recomendaciones/peatones/img2-02.jpg");
+}
+		
+#img3{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/peatones/img3-01.jpg");
+}
+#img3:hover{
+	background-image: url("/images/recomendaciones/peatones/img3-02.jpg");
+}
+
+#img4{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/peatones/img4-01.jpg");
+}
+#img4:hover{
+	background-image: url("/images/recomendaciones/peatones/img4-02.jpg");
+}
+		
+#img5{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/peatones/img5-01.jpg");
+}
+#img5:hover{
+	background-image: url("/images/recomendaciones/peatones/img5-02.jpg");
+}
+		
+#img6{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/peatones/img6-01.jpg");
+}
+#img6:hover{
+	background-image: url("/images/recomendaciones/peatones/img6-02.jpg");
+}
+
+#img7{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/peatones/img7-01.jpg");
+}
+#img7:hover{
+	background-image: url("/images/recomendaciones/peatones/img7-02.jpg");
+}
+		
+#img8{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/peatones/img8-01.jpg");
+}
+#img8:hover{
+	background-image: url("/images/recomendaciones/peatones/img8-02.jpg");
+}
+		
+#img9{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/peatones/img9-01.jpg");
+}
+#img9:hover{
+	background-image: url("/images/recomendaciones/peatones/img9-02.jpg");
+}
+
+#img10{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/peatones/img10-01.jpg");
+}
+#img10:hover{
+	background-image: url("/images/recomendaciones/peatones/img10-02.jpg");
+}
+
+
+
+/*--------AUTOS--------*/
+
+#imgA1{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/auto/imgA1-01.jpg");
+}
+#imgA1:hover{
+	background-image: url("/images/recomendaciones/auto/imgA1-02.jpg");
+}	
+#imgA2{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/auto/imgA2-01.jpg");
+}
+#imgA2:hover{
+	background-image: url("/images/recomendaciones/auto/imgA2-02.jpg");
+}
+		
+#imgA3{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/auto/imgA3-01.jpg");
+}
+#imgA3:hover{
+	background-image: url("/images/recomendaciones/auto/imgA3-02.jpg");
+}
+#imgA4{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/auto/imgA4-02.jpg");
+}
+#imgA4:hover{
+	background-image: url("/images/recomendaciones/auto/imgA4-02.jpg");
+}	
+#imgA5{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/auto/imgA5-01.jpg");
+}
+#imgA5:hover{
+	background-image: url("/images/recomendaciones/auto/imgA5-02.jpg");
+}
+		
+#imgA6{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/auto/imgA6-01.jpg");
+}
+#imgA6:hover{
+	background-image: url("/images/recomendaciones/auto/imgA6-02.jpg");
+}
+
+#imgA7{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/auto/imgA7-01.jpg");
+}
+#imgA7:hover{
+	background-image: url("/images/recomendaciones/auto/imgA7-02.jpg");
+}
+		
+#imgA8{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/auto/imgA8-01.jpg");
+}
+#imgA8:hover{
+	background-image: url("/images/recomendaciones/auto/imgA8-02.jpg");
+}
+		
+#imgA9{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/auto/imgA9-01.jpg");
+}
+#imgA9:hover{
+	background-image: url("/images/recomendaciones/auto/imgA9-02.jpg");
+}
+
+#imgA10{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/auto/imgA10-01.jpg");
+}
+#imgA10:hover{
+	background-image: url("/images/recomendaciones/auto/imgA10-02.jpg");
+}
+
+
+
+
+
+
+/*--------TRASPORTE PUBLICO--------*/
+
+#imgT1{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/transportePublico/imgT1-01.jpg");
+}
+#imgT1:hover{
+	background-image: url("/images/recomendaciones/transportePublico/imgT1-02.jpg");
+}	
+#imgT2{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/transportePublico/imgT2-01.jpg");
+}
+#imgT2:hover{
+	background-image: url("/images/recomendaciones/transportePublico/imgT2-02.jpg");
+}
+		
+#imgT3{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/transportePublico/imgT3-01.jpg");
+}
+#imgT3:hover{
+	background-image: url("/images/recomendaciones/transportePublico/imgT3-02.jpg");
+}
+#imgT4{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/transportePublico/imgT4-02.jpg");
+}
+#imgT4:hover{
+	background-image: url("/images/recomendaciones/transportePublico/imgT4-02.jpg");
+}	
+#imgT5{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/transportePublico/imgT5-01.jpg");
+}
+#imgT5:hover{
+	background-image: url("/images/recomendaciones/transportePublico/imgT5-02.jpg");
+}
+		
+#imgT6{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/transportePublico/imgT6-01.jpg");
+}
+#imgT6:hover{
+	background-image: url("/images/recomendaciones/transportePublico/imgT6-02.jpg");
+}
+
+#imgT7{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/transportePublico/imgT7-01.jpg");
+}
+#imgT7:hover{
+	background-image: url("/images/recomendaciones/transportePublico/imgT7-02.jpg");
+}
+		
+#imgT8{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/transportePublico/imgT8-01.jpg");
+}
+#imgT8:hover{
+	background-image: url("/images/recomendaciones/transportePublico/imgT8-02.jpg");
+}
+		
+#imgT9{
+	height: 231px;
+	width: 100%; 
+	background-image: url("/images/recomendaciones/transportePublico/imgT9-01.jpg");
+}
+#imgT9:hover{
+	background-image: url("/images/recomendaciones/transportePublico/imgT9-02.jpg");
+}
+
+#imgT10{
+	height: 231px;
+	min-width: 300px; 
+	background-image: url("/images/recomendaciones/transportePublico/imgT10-01.jpg");
+}
+#imgT10:hover{
+	background-image: url("/images/recomendaciones/transportePublico/imgT10-02.jpg");
+}
+
+
