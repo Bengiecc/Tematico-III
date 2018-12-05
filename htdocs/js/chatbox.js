@@ -90,13 +90,19 @@ function chatbotResponse() {
 
 
 
-    if (cadenaUsuario == 'conocesasiri') {
+    if (cadenaUsuario == 'conocesasiri' || cadenaUsuario == 'quienessiri') {
         const hi = ['No la conozco en persona pero creo que podríamos ser buenas amigas.', 'Sólo he escuchado hablar de ella.', '¡Claroo! es mi colega y ella trabaja para apple.', 'A veces salimos a tomar el té.']
         botMessage = hi[Math.floor(Math.random() * (hi.length))];;
     }
 
-    if (cadenaUsuario == 'holasiri' || cadenaUsuario == 'siri') {
+    if (cadenaUsuario == 'holasiri' || cadenaUsuario == 'siri' || cadenaUsuario == 'heysiri') {
         const hi = ['Wow, parece que me has confundido.', 'Creo que me has confundido con otra asistente inteligente.', 'Yo soy María.', 'Siri trabaja para apple.']
+        botMessage = hi[Math.floor(Math.random() * (hi.length))];;
+    }
+
+     if (cadenaUsuario == 'conocesacortana' || cadenaUsuario == 'quienescortana') {
+        const hi = ['No la conozco en persona pero he escuchado hablar sobre ella.', 'Sólo he escuchado hablar de ella.', '¡Claroo! es mi colega y ella trabaja para Microsoft.', 'A veces salimos junto con Siri a tomar el té.',
+                    'Si, nos gusta hablar sobre inteligencia artificial']
         botMessage = hi[Math.floor(Math.random() * (hi.length))];;
     }
 
