@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/recomendaciones.css">
+
     <link rel="icon" type="image/png" href="/images/favicon.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
@@ -34,12 +35,25 @@
 <body>
 
 
-    <!--load("header.html")
-
-    img1
-    <iframe width="100%" height="250px" src="https://www.youtube.com/embed/VF06AN4oBvw" frameborder="0" allowfullscreen></iframe>
-<div class="video-container"><iframe width="100%" height="250px" src="https://www.youtube.com/embed/VF06AN4oBvw?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>    -->
+    
     <div id="header"></div>
+
+
+
+    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="videoModal"            aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <div>
+                        <iframe width="100%" height="350" src=""></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     <section>
         <div class="container pt-3 pt-lg-5">
@@ -52,15 +66,20 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/VF06AN4oBvw" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	<a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/VF06AN4oBvw">
                 		<div id="img1"></div>
                 	</a>
                 </div>
             </div>
+
+            
+
+
+
             <div class="card ">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/vTEChOyTbjI" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	<a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/vTEChOyTbjI">
                 		<div id="img2"></div>
                 	</a>
                 </div>
@@ -68,7 +87,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/u0UvIKsCF4w" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/u0UvIKsCF4w">
                 		<div id="img3"></div>
                 	</a>
                 
@@ -77,10 +97,10 @@
 
             <div class="card bg-primary text-white text-center p-3">
                 <blockquote class="blockquote mb-0">
-                    <p>Recomendaciones. <br />Da clic sobre algún video. </p>
+                    <p>Recomendaciones. <br />Da clic sobre la imagen para ver el video. </p>
                     <footer class="blockquote-footer text-white">
                         <small>
-                            Lo decimos Nosotros
+                            Cultura vial.
                         </small>
                     </footer>
                 </blockquote>
@@ -88,7 +108,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/NhvtFgU_smg" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/NhvtFgU_smg">
                 		<div id="img4"></div>
                 	</a>
                 </div>
@@ -96,7 +117,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/b5FGGsDed7Q" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/b5FGGsDed7Q">
                 		<div id="img5"></div>
                 	</a>
                 </div>
@@ -104,7 +126,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/J_869Q21JM0" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/J_869Q21JM0">
                 		<div id="img6"></div>
                 	</a>
                 </div>
@@ -112,7 +135,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/MSepm1Wk-rM" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/eD4kGeUlIBk">
                 		<div id="img7"></div>
                 	</a>
                 </div>
@@ -121,7 +145,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/eD4kGeUlIBk" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/DAsTIXLkhe0">
                 		<div id="img8"></div>
                 	</a>
                 </div>
@@ -129,7 +154,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/DAsTIXLkhe0" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/ZUOn8a_GnoA">
                 		<div id="img9"></div>
                 	</a>
                 
@@ -138,7 +164,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/ZUOn8a_GnoA" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/MSepm1Wk-rM">
                 		<div id="img10"></div>
                 	</a>
                 </div>
@@ -159,7 +186,8 @@
 			<div class="card">
                 <div class="video-container">
                 	<!--<iframe width="560" height="315" src="https://www.youtube.com/embed/3Fv4e--Pwb8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/3Fv4e--Pwb8">
                 		<div id="imgA1"></div>
                 	</a>
                 </div>
@@ -167,7 +195,8 @@
             <div class="card ">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/8A0yaI6f0rg" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/0ZlheU1TqUg">
                 		<div id="imgA2"></div>
                 	</a>
                 </div>
@@ -175,7 +204,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/LfuqRPIAdVk" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/eD4kGeUlIBk">
                 		<div id="imgA3"></div>
                 	</a>
                 
@@ -184,10 +214,10 @@
 
             <div class="card bg-primary text-white text-center p-3">
                 <blockquote class="blockquote mb-0">
-                    <p>Esto será una recomendación. <br /> Como varias otras más.</p>
+                    <p>Recomendaciones. <br />Da clic sobre la imagen para ver el video. </p>
                     <footer class="blockquote-footer text-white">
                         <small>
-                            Lo decimos Nosotros
+                            Cultura vial.
                         </small>
                     </footer>
                 </blockquote>
@@ -196,8 +226,9 @@
 			
             <div class="card">
                 <div class="video-container">
-                	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/0ZlheU1TqUg" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/8A0yaI6f0rg" frameborder="0" allowfullscreen></iframe>-->
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/8A0yaI6f0rg">
                 		<div id="imgA4"></div>
                 	</a>
                 </div>
@@ -205,7 +236,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/AGvkBSaHbGE" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/AGvkBSaHbGE">
                 		<div id="imgA5"></div>
                 	</a>
                 </div>
@@ -213,7 +245,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/G8L5LN_j3Gc" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/83woUh_vVDY">
                 		<div id="imgA6"></div>
                 	</a>
                 </div>
@@ -221,7 +254,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/cn8QoWw2OQw" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/LfuqRPIAdVk">
                 		<div id="imgA7"></div>
                 	</a>
                 </div>
@@ -230,7 +264,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/eD4kGeUlIBk" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/G8L5LN_j3Gc">
                 		<div id="imgA8"></div>
                 	</a>
                 </div>
@@ -238,7 +273,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/83woUh_vVDY" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/H9wXMFzO44A">
                 		<div id="imgA9"></div>
                 	</a>
                 
@@ -247,7 +283,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/H9wXMFzO44A" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/cn8QoWw2OQw">
                 		<div id="imgA10"></div>
                 	</a>
                 </div>
@@ -267,7 +304,8 @@
 			<div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/82mW15k1OeU" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/82mW15k1OeU">
                 		<div id="imgT1"></div>
                 	</a>
                 </div>
@@ -275,7 +313,8 @@
             <div class="card ">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/wCnPrkM9qDw" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/u8YKZq5mEqI">
                 		<div id="imgT2"></div>
                 	</a>
                 </div>
@@ -283,7 +322,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/xYUAySXFzOs" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/0xCWQIGLEqc">
                 		<div id="imgT3"></div>
                 	</a>
                 
@@ -305,7 +345,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/u8YKZq5mEqI" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/wCnPrkM9qDw">
                 		<div id="imgT4"></div>
                 	</a>
                 </div>
@@ -313,7 +354,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/NlcYwMQuxPE" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/NlcYwMQuxPE">
                 		<div id="imgT5"></div>
                 	</a>
                 </div>
@@ -321,7 +363,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/hzCaa3D60M8" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/icNtMUBJTB4">
                 		<div id="imgT6"></div>
                 	</a>
                 </div>
@@ -329,7 +372,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/kl-gfff3Jwo" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/xYUAySXFzOs">
                 		<div id="imgT7"></div>
                 	</a>
                 </div>
@@ -338,7 +382,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/0xCWQIGLEqc" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/hzCaa3D60M8">
                 		<div id="imgT8"></div>
                 	</a>
                 </div>
@@ -346,7 +391,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/icNtMUBJTB4" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/5ryVVFuwWts">
                 		<div id="imgT9"></div>
                 	</a>
                 
@@ -355,7 +401,8 @@
             <div class="card">
                 <div class="video-container">
                 	<!--<iframe width="100%" height="250px" src="https://www.youtube.com/embed/5ryVVFuwWts" frameborder="0" allowfullscreen></iframe>-->
-                	<a href="">
+                	
+                    <a href="#" data-toggle="modal" data-target="#videoModal" data-theVideo="https://www.youtube.com/embed/kl-gfff3Jwo">
                 		<div id="imgT10"></div>
                 	</a>
                 </div>
@@ -387,5 +434,24 @@
     });
 
 </script>
+
+
+<script> 
+    autoPlayYouTubeModal();
+
+  //FUNCION PARA REPRODUCIR DE MANERA AUTOMATICA EN UNA VENTANA MODAL
+    function autoPlayYouTubeModal() {
+      var trigger = $("body").find('[data-toggle="modal"]');
+      trigger.click(function () {
+          var theModal = $(this).data("target"),
+              videoSRC = $(this).attr("data-theVideo"),
+              videoSRCauto = videoSRC + "?autoplay=1";
+          $(theModal + ' iframe').attr('src', videoSRCauto);
+          $(theModal + ' button.close').click(function () {
+              $(theModal + ' iframe').attr('src', videoSRC);
+          });
+      });
+    }
+  </script>
 
 </html>
