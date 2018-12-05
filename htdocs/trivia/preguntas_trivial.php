@@ -18,9 +18,10 @@ shuffle($respuestas);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Trivia</title>
+    <title>DUMCB | Trivia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link type="text/css" rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png"/>
     <script src="/js/jquery.js"></script>
 </head>
 
@@ -95,6 +96,8 @@ shuffle($respuestas);
             }, 1000);
         };
 
+    
+
         function timeoutRedirect() {
             $.redirect("instancias/respuestas.php", {'respuesta': '99'});
 
@@ -102,7 +105,6 @@ shuffle($respuestas);
         $(document).ready(function() {
             $(".countdown").countdown(timeoutRedirect, 20, " s");
         })
-
     </script>
 </body>
 
