@@ -33,6 +33,11 @@ Herramienta lúdica que permite al usuario hacer un reconocimiento sobre qué ta
 
 Por el momento, el diseño está optimizado para versiones de escritorio. Si el tiempo lo permite, se optimizará para móviles.
 
-## Sobre la accesibilidad
+#Carpeta Docs
+Esta carpeta contiene archivos como la documentación, mapa de sitio, reglamento de transito y el archivo .sql de la base de datos de la página.
 
-La accesibilidad NO es prioridad para este proyecto.
+# Para utilizar el sistema.
+Necesitas tener un servidor local instalado en tu computadora.
+1.- Copiar en la carpeta de tu servidor los archivos y carpetas que se encuentran dentro de la carpeta "htdocs".
+2.- Importar la base de datos del archivo "trivial.sql" que se encuentra en la carpeta "docs".
+3.- Para entrar a la pagina, desde un navegador colocar "http://localhost/index.html" (esto puede variar dependiendo de la configuración de tu navegador). El inicio de la página es index.html
