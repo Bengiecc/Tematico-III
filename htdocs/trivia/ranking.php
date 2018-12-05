@@ -10,33 +10,55 @@ $ranking = $trivial->ranking();
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>DUMCB | Ranking</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css" />
-    	<link rel="icon" type="image/png" href="/images/favicon.png"/>
-		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
-	</head> 
-<body> 
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
 
-	<div data-role="page">
-		<h2>Hola <?php echo $_SESSION['nombre'] ?></h2>
-		<ul data-role="listview">
+<body>
+
+    <div id="header"></div>
+
+    <div class="container mx-auto py-3 align-middle">
+        <a href="#" class="text-left float-left pt-3"><img src="/images/back.png" width="50%"></a>
+        <div class="text-center">
+            <h1 class="text-center display-4">Tabla de Resultados</h1>
+        </div>
+    </div>
+
+	<div class="container mx-auto">
+		<ul class="table-dark w-50 mx-auto" style="list-style-type: none;">
 			<?php 
 			$i = 1;
 			foreach($ranking as $rank)
 			{
 			?>
-			<li><?php echo $i ?>.&nbsp;&nbsp;<?php echo $rank['nombre']?><span style="float: right"><?php echo $rank['puntos']?> puntos</span></li>
+			<li class="py-3 px-2"><?php echo $i ?>.&nbsp;&nbsp;<?php echo $rank['nombre']?><span style="float: right"><?php echo $rank['puntos']?> puntos</span></li>
 			<?php
 			$i++;
 			}
 			?>
 		</ul>
-		<a href="preguntas_trivial.php" data-role="button" data-theme="b" data-ajax="false">Ir a jugar</a>  
-		<a href="/index.html" data-role="button" data-theme="a" data-ajax="false">Salir</a>  
 
 	</div>
-	
+	<div id="footer"></div>
 </body>
+<script src="/js/jquery.js"></script>
+<script src="/js/popper.js"></script>
+<script src="/js/bootstrap.js"></script>
+    <script>
+    $("#header").load("/resources/header.html");
+    $("#footer").load("/resources/footer.html");
+        $(document).ready(function() {
+
+        var docHeight = $(window).height();
+        var footerHeight = $('#footer').height();
+        var footerTop = $('#footer').position().top + footerHeight;
+
+        if (footerTop < docHeight)
+            $('#footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
+    });
+    </script>
 </html>
 
